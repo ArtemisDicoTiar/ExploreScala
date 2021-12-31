@@ -1,2 +1,33 @@
-group 'org.john'
-version '0.1-SNAPSHOT'
+plugins {
+    id "com.diffplug.spotless" version "6.0.0"
+}
+
+subprojects {
+    apply plugin: 'scala'
+    apply plugin: "com.diffplug.spotless"
+
+    group = 'org.john'
+    version = '0.1-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    // 서브 모듈에 공통으로 의존성을 추가 시킬 디펜던시를 정의합니다.
+    dependencies {
+        implementation group: 'org.scala-lang', name: 'scala-library', version: "${scalaVersion}"
+        implementation group: 'org.scala-lang.modules', name: 'scala-xml_2.12', version: '2.0.1'
+    }
+
+    spotless {
+        scala {
+            scalafmt().configFile('../.scalafmt.conf')
+        }
+    }
+}
+
+project(':chapter4') {
+    dependencies {
+
+    }
+}
