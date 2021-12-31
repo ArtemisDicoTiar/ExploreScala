@@ -17,6 +17,10 @@ subprojects {
     dependencies {
         implementation group: 'org.scala-lang', name: 'scala-library', version: "${scalaVersion}"
         implementation group: 'org.scala-lang.modules', name: 'scala-xml_2.12', version: '2.0.1'
+
+        testImplementation group: 'junit', name: 'junit', version: "${junitVersion}"
+        testImplementation group: 'org.scalatest', name: 'scalatest_2.12', version: "${scalaTestVersion}"
+        testImplementation group: 'org.scalatestplus', name: 'junit-4-13_2.12', version: "${scalaTestPlusVersion}"
     }
 
     spotless {
