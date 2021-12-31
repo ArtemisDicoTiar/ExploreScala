@@ -35,3 +35,15 @@ project(':chapter4') {
 
     }
 }
+
+project(':chapter5') {
+    dependencies {
+
+    }
+}
+
+project(':chapter8') {
+    dependencies {
+
+    }
+}

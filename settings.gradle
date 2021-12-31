@@ -10,7 +10,5 @@
 rootProject.name = 'ExploreScala'
 
 include 'chapter4'
-
-
-
-
+include 'chapter5'
+include 'chapter8'
