@@ -26,6 +26,7 @@ subprojects {
     spotless {
         scala {
             scalafmt().configFile('../.scalafmt.conf')
+
         }
     }
 }
@@ -43,6 +44,12 @@ project(':chapter5') {
 }
 
 project(':chapter8') {
+    dependencies {
+
+    }
+}
+
+project(':chapter9') {
     dependencies {
 
     }
