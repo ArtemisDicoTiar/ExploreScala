@@ -54,3 +54,9 @@ project(':chapter9') {
 
     }
 }
+
+project(':chapter10') {
+    dependencies {
+
+    }
+}
